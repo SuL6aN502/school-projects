@@ -1,0 +1,29 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import Header from "./components/Header";
+import React from 'react'
+import MyThoughts from "./MyThoughts";
+import Footer from "./components/Footer";
+import Login from "./Login";
+import Signup from "./Signup";
+import Ideas from "./Ideas";
+import AboutUs from "./About_us";
+import YourIdea from './YourIdea';
+export default function App() {
+  return (
+    <div id='App'>
+      <Header />
+      <Routes>
+        <Route path='/MyThoughts' element={<MyThoughts/>}/>
+        <Route path='' element={<Home/>}/>
+        <Route path='/Login' element={<Login/>}/>
+        <Route path='/Signup' element={<Signup/>}/>
+        <Route path='/Ideas' element={<Ideas/>}/>
+        <Route path='/AboutUs' element={<AboutUs/>}/>
+        <Route path='/YourIdea' element={<YourIdea/>}/>
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
+
