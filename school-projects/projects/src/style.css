@@ -23,12 +23,13 @@ html{
 header{
     width: 100%;
     height: 10vh;
-    background: #115849;
+    background-image:linear-gradient(90deg,#19023b,#63995E);
     display: flex;
     color: aliceblue;
     justify-content: space-between;
     align-items: center;
     padding:0 30px 0 30px;
+    box-shadow: rgba(38, 57, 77, 0.468) 0px 20px 30px -10px;
 }
 header nav ul{
     display: flex;
@@ -125,22 +126,25 @@ header > div img{
 
 .Home hgroup{
     display: flex;
-    
+    width: 50%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3vh;
     direction: rtl;
+    text-align: right;
     padding: 0 2% 0 2%;
 }
 .Home hgroup h1{
-font-size: 5rem;
+width: 100%;
+font-size: 4.5rem;
 background-image: linear-gradient(90deg,#14B290,#000);
 color: transparent;
 background-clip: text;
 }
 .Home hgroup p{
-font-size: 1.7rem;
+font-size: 1.5rem;
+width: 100%;
 }
 .Home hgroup a{
     width: 10vw;
@@ -191,7 +195,7 @@ align-items: center;
 gap: 5%;
 }
 .MyThoughts section:nth-child(1){
-    width: 97%;
+    width: 100%;
     height: 80vh;
     display: flex;
     justify-content: space-around;
@@ -212,19 +216,20 @@ direction: rtl;
 
 
 .MyThoughts > section:nth-child(1) > div{
-    width: 30%;
-    height: 80%;
-    background-color: #115849;
+    width: 25%;
+    height: 75%;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    color: aliceblue;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: space-evenly;
+    border: #115849 1px solid;
+
 }
 
 .MyThoughts section > div hr{
@@ -233,7 +238,7 @@ direction: rtl;
 .MyThoughts > section:nth-child(2){
     width: 90%;
     height: 46vh;
-    background: #115849;
+    background: #62975F;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -262,7 +267,7 @@ direction: rtl;
 .Card{
     width: 30%;
     height: 70%;
-    background-color: #222;
+    background-color: #1c794c;
     border: aliceblue 1px solid;
     color: aliceblue;
     display: flex;
@@ -324,31 +329,27 @@ direction: rtl;
 
 
 .Card_project{
-    width: 300px;
+    width: 325px;
     height: 35vh;
     direction: rtl;
-    background-color: #476f67;
+    background-color: #0c6c57;
     padding: 10px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    border-bottom: #14B290 10px solid;
+    border-bottom: #19053974 10px solid;
     color: aliceblue;
+    text-align: center;
+    box-shadow: rgba(38, 57, 77, 0.6) 0px 20px 30px -10px;
 }
 .Card_project hr{
 color: aliceblue;
 margin: 3px;
 }
-
-.Card_project button{
-    padding: 5px;
-     border-radius:10px ;
-     -webkit-border-radius:10px ;
-     -moz-border-radius:10px ;
-     -ms-border-radius:10px ;
-     -o-border-radius:10px ;
+.Card_project p{
+    margin: 10% 0 0 0;
 }
 
 
@@ -372,6 +373,15 @@ margin: 3px;
     width: 60%;
     height: 70%;
     background: url(./assets/scirty.png) center ;
+    background-size: cover;
+    animation: move 7s infinite;
+    -webkit-animation: move 7s infinite;
+}
+
+.left_side_Idea{
+    width: 45%;
+    height: 85%;
+    background: url(./assets/undraw_lightbulb_moment_re_ulyo.png) center ;
     background-size: cover;
     animation: move 7s infinite;
     -webkit-animation: move 7s infinite;
@@ -544,11 +554,12 @@ margin: 3px;
 /* Ideas */
 .Ideas{
     width: 100vw;
-    height: 200vh;
+    height: 230vh;
     display: grid;
     align-items: center;
-    place-items: center; /* توسيط العناصر أفقيًا وعموديًا */
-    grid-template-columns: repeat(3,1fr);
+    place-items: center; 
+    grid-template-columns: repeat(4,1fr);
+    padding: 50px 0 0 0;
 }
 
 
@@ -574,6 +585,7 @@ margin: 3px;
     width: 30%;
     padding: 0 1% 0 0;
     border-right: #115849 3px solid;
+    
 }
 .About-us > hgroup:nth-child(2) h2{
     font-size: 3rem;
@@ -594,8 +606,9 @@ margin: 3px;
     font-size: 1.3rem;
 }
 .About-us > div{
-    width: 93%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;    width: 93%;
     height: 90vh;
+    padding:  0 0 5% 0;
     border-radius: 30px;
     background-color: #115849;
     -webkit-border-radius: 30px;
@@ -619,9 +632,23 @@ margin: 3px;
 .About-us > div hgroup{
     direction: rtl;
     width: 30%;
-    padding: 0 1% 0 0;
-    border-right: aliceblue 3px solid;
+    padding: 1% 1% 0 0;
+    border-right: aliceblue 5px solid;
     height: 30%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 30%;
+    border-radius: 25px 0px 25px 0 ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    -webkit-border-radius: 25px 0px 25px 0 ;
+    -moz-border-radius: 25px 0px 25px 0 ;
+    -ms-border-radius: 25px 0px 25px 0 ;
+    -o-border-radius: 25px 0px 25px 0 ;
+}
+.About-us > div hgroup p{
+width: 84%;
+
 }
 
 /* YourIdea */
@@ -635,7 +662,7 @@ margin: 3px;
 .YourIdea form{
     width: 25%;
     height: 70%;
-    background-color: #115849;
+    background-color: #12A182;
     color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -666,9 +693,8 @@ margin: 3px;
     color: aliceblue;
 }
 #imgs{
-    width: 30%;
+    width: 50%;
     font-size: large;
-    margin: 0 0 0 20%;
 }
 
 .YourIdea form textarea{
@@ -736,7 +762,7 @@ margin: 3px;
 footer{
     width: 100%;
     height: 30vh;
-    background-color: #222;
+    background-image:linear-gradient(200deg,#19023b,#63995E);
     display: flex;
     justify-content: space-around;
     align-items: start;
@@ -772,4 +798,19 @@ footer img{
     position: absolute;
     color: aliceblue;
     bottom: 0;
+}
+
+
+
+
+
+
+
+
+/* -------------media-------------------- */
+
+@media (min-width:0) and (max-width:1000px) {
+
+    
+
 }

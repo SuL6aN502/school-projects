@@ -16,8 +16,6 @@ export default function Header(){
                 <hr></hr>
                 <Link className='li' to="/MyThoughts">إبداعات</Link>
                 <hr></hr>
-                <Link className='li' to="/Ideas">الافكار</Link>
-                <hr></hr>
                 <Link className='li' to="/AboutUs">من نحن</Link>
             </ul>
         </nav>

@@ -11,7 +11,7 @@ import AboutUs from "./About_us";
 import YourIdea from './YourIdea';
 export default function App() {
   return (
-    <div id='App'>
+    <>
       <Header />
       <Routes>
         <Route path='/MyThoughts' element={<MyThoughts/>}/>
@@ -23,7 +23,7 @@ export default function App() {
         <Route path='/YourIdea' element={<YourIdea/>}/>
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -1,30 +1,17 @@
-const express = require('express')
-const app = express()
-const port = 502
+const express = require('express');
+const app = express();
 
-const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://Sultan:3anAyFaDcszKKxcT@sultan.mtnwpwg.mongodb.net/School?retryWrites=true&w=majority');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://Sultan:mfZbTLCooWFcHxrq@sultan.mtnwpwg.mongodb.net/Cards?retryWrites=true&w=majority');
 
+ 
+const CardsModel = require("./models/Cards")
 
-
-
-// IMPORT USER MODEL
-const UserModel = require("./models/Users.js");
-
-
-
-
-
-app.get('/Users', async (req,res)=>{
-    const Users = await UserModel.find();
-    res.json(Users);
+app.get("/Cards", async (req, res)=>{
+    const Cards = await CardsModel.find()
+    res.json(Cards);
 })
 
-
-
-
-
-
-app.listen(port, ()=>{
-    console.log();
+app.listen(3001, ()=>{
+console.log('hi');
 })

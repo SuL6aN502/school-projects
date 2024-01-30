@@ -1,7 +1,7 @@
 export default function YourIdea(){
     return(
         <main className="YourIdea">
-            <section className="left_side"></section>
+            <section className="left_side_Idea"></section>
             <form>
                 <label htmlFor="name">ادخل اسمك الرباعي</label>
                 <input type="text" placeholder="الاسم الرباعي" id="name"></input>
@@ -13,7 +13,7 @@ export default function YourIdea(){
                 <textarea type="text" placeholder="" id="text"></textarea>
 
                 <label htmlFor="imgs">ارفاق صور</label>
-                <input type="file" id='imgs'></input>
+                <input type="file" name="" value=""  id='imgs'></input>
 
 
                 <button type="submit">ارسال</button>

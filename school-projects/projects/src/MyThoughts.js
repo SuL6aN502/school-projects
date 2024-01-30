@@ -17,7 +17,7 @@ export default function MyThoughts() {
         <div>
           <h3>ابرز الابداعات</h3>
           <hr></hr>
-          <Card title="تعزيز الابتكار في التعليم" studentName="زياد علي السلمي" ideaText="تقديم برامج تعليمية تشجع على الإبداع والابتكار، مع توفير فرص للطلاب لتطوير مشاريعهم الخاصة والعمل على تحقيقها."/>
+          <Card title="تعزيز الابتكار في التعليم" schoolName="ابتدائية الامام الشاطبي" volunteerIdea="تقديم برامج تعليمية تشجع على الإبداع والابتكار، مع توفير فرص للطلاب لتطوير مشاريعهم الخاصة والعمل على تحقيقها."/>
         </div>
       </section>
       <section>
@@ -25,7 +25,7 @@ export default function MyThoughts() {
         <hr></hr>
         <div className="Cards">
           <div className="Card">
-            <h4>اقتراح</h4>
+            <h4>فكرة</h4>
             <p>500000</p>
           </div>
           <div className="Card">
