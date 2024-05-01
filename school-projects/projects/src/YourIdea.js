@@ -1,7 +1,7 @@
 export default function YourIdea(){
     return(
         <main className="YourIdea">
-            <section className="left_side_Idea"></section>
+            <img src={require("./assets/img1.png")} alt="img"></img>
             <form>
                 <label htmlFor="name">ادخل اسمك الرباعي</label>
                 <input type="text" placeholder="الاسم الرباعي" id="name"></input>

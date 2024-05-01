@@ -10,7 +10,6 @@ export default function Login() {
           <label htmlFor="pass">كلمة المرور </label>
           <input type="password" placeholder="كلمة المرور" id="pass" value={''}></input>
           <Link to="/forgitpass">هل نسيت كلمة المرور؟</Link>
-          <Link to="/signup">ليس لديك حساب؟</Link>
           <button type="submit">تسجيل دخول</button>
         </form>
     </main>

@@ -1,4 +1,6 @@
 export default function Footer() {
+  const year = new Date().getFullYear()
+  console.log(year);
   return (
     <footer>
       <img src={require("../assets/wblogo.png")} alt="logo"></img>
@@ -6,11 +8,11 @@ export default function Footer() {
       <img src={require("../assets/mt.png")} alt="logo"></img>
       <ul className="ulF">
         <h3>وسائل تواصل المدرسة</h3>
-        <a href="">
+        <a href="https://twitter.com/MOE_RYH_26_0087?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
           <i className="fa-brands fa-x-twitter"></i>
           <p>تويتر</p>
         </a>
-        <a href="">
+        <a href="https://t.me/abenalnafese">
           <i className="fa-brands fa-telegram"></i>
           <p>تلجرام</p>
         </a>
@@ -38,7 +40,7 @@ export default function Footer() {
           <p>سناب شات</p>
         </a>
       </ul>
-      <p className="copyright">2023®جميع الحقوق محفوظة لثانوية ابن النفيس الرياض مكتب تعليم قرطبة</p>
+      <p className="copyright">{year}®جميع الحقوق محفوظة لثانوية ابن النفيس الرياض مكتب تعليم قرطبة</p>
     </footer>
   );
 }

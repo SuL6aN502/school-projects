@@ -6,8 +6,8 @@ export default function Header(){
     return(
     <header>
         <div>
-            <img src={require('../assets/logo.png')} alt='logo'></img>
-            <Link className='login_btn' to="/Login">تسجيل الدخول</Link>
+        <img src={require('../assets/logo.png')} alt='logo'></img>
+            <Link className='login_btn' to="/Login">دخول</Link>
         </div>
         
         <nav>

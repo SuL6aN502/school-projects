@@ -1,17 +1,23 @@
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import Typed from "typed.js";
+export default function Home() {
 
-export default function Home(){
-    return(
-    <main className='Home'>
-        <img src={require('./assets/undraw_Thought_process_re_om58.png')} alt='img'></img>
+  React.useEffect(() => {
+    const typed = new Typed(".liner", {
+      strings: ["بَنك الأَفكَار التّطوِعية"],
+      typeSpeed: 50,
+      showCursor: false
+    })
+  }, []);
+  return (
+    <main className="Home">
+      <img src={require("./assets/Home.png")} alt="img"></img>
       <hgroup>
-        <h1 className='liner'>
-          بَنك <span className='span-1'>الأَفكَار</span> التّطوِعية 
-        </h1>
-        <p>
-        مبادرة من مدرسة ابن النفيس الثانوية لتطوير العمل التطوعي
-        </p>
-        <Link to='/YourIdea'>اطرح فكرة!</Link>
+        <h1 className="liner"></h1>
+        <p>مبادرة من مدرسة ابن النفيس الثانوية لتطوير العمل التطوعي</p>
+        <Link to="/YourIdea">اطرح فكرة!</Link>
       </hgroup>
     </main>
-)}
+  );
+}
