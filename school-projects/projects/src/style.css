@@ -3,11 +3,7 @@
 /* header */
 @keyframes move {
   50% {
-    transform: translate(10px, -10px);
-    -webkit-transform: translate(0, -10px);
-    -moz-transform: translate(0, -10px);
-    -ms-transform: translate(0, -10px);
-    -o-transform: translate(0, -10px);
+    transform: translate(0, -10px);
   }
 }
 /* صفحة الابداعات */
@@ -126,15 +122,7 @@ header > div {
   text-decoration: none;
   border: 1px solid aliceblue;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
   transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
   font-size: 1.2rem;
 }
 .login_btn:hover {
@@ -149,22 +137,41 @@ header > div {
 
 /* home page*/
 .Home {
-  width: 95%;
+  width: 100%;
+  gap: 20vh;
+  display: flex;
+  padding: 0 0 20vh 0;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.Home::after {
+  content: "";
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(rgba(20, 178, 144, 0.0745098039), transparent 60%);
+  position: absolute;
+  right: 0;
+  border-radius: 10000px;
+  z-index: -1;
+}
+.Home section:nth-child(1) {
+  width: 90%;
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-.Home img {
+.Home section:nth-child(1) img {
+  width: 50%;
   pointer-events: none;
-  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
-  animation: move 3s infinite;
-  -webkit-animation: move 3s infinite;
+  animation: move 7s infinite;
+  -webkit-animation: move 7s infinite;
 }
-.Home hgroup {
+.Home section:nth-child(1) hgroup {
   display: flex;
   width: 50%;
   justify-content: center;
@@ -174,7 +181,7 @@ header > div {
   direction: rtl;
   text-align: right;
 }
-.Home hgroup h1 {
+.Home section:nth-child(1) hgroup h1 {
   width: 100%;
   font-size: 4.5rem;
   background-image: linear-gradient(220deg, #14b290, #000);
@@ -183,7 +190,7 @@ header > div {
           background-clip: text;
   position: relative;
 }
-.Home hgroup h1::after {
+.Home section:nth-child(1) hgroup h1::after {
   content: "";
   width: 300px;
   height: 300px;
@@ -192,11 +199,11 @@ header > div {
   inset: 0px 100px 0 0;
   border-radius: 10000px;
 }
-.Home hgroup p {
+.Home section:nth-child(1) hgroup p {
   font-size: 1.5rem;
   width: 100%;
 }
-.Home hgroup a {
+.Home section:nth-child(1) hgroup a {
   width: 10vw;
   height: 6vh;
   font-size: 1.23em;
@@ -215,12 +222,73 @@ header > div {
   color: #115849;
   text-decoration: none;
 }
-.Home hgroup a:hover {
+.Home section:nth-child(1) hgroup a:hover {
   transform: translate(0, -10px);
 }
-
-.span-1 {
+.Home section:nth-child(3) {
+  width: 90%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 5%;
+  position: relative;
+}
+.Home section:nth-child(3)::after {
+  content: "";
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(rgba(20, 178, 144, 0.0666666667), transparent 60%);
+  position: absolute;
+  inset: 0px 100px 0 0;
+  border-radius: 10000px;
+}
+.Home section:nth-child(3) p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  text-align: right;
+  font-size: 2rem;
+  direction: rtl;
+  background-image: linear-gradient(220deg, #14b290, #000);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.Home section:nth-child(3) i {
+  color: #14b290;
+  font-size: 3rem;
+  height: 100%;
+  animation: move 3s infinite reverse;
+}
+.Home section:nth-child(3) i:nth-child(3) {
+  display: flex;
+  align-items: end;
+  animation: move 3s infinite;
+}
+.Home section:nth-child(2) {
+  width: 90%;
+  height: 39vh;
+  border: 2px solid #115849;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.Home section:nth-child(2) h3 {
   color: #115849;
+  font-size: x-large;
+}
+.Home section:nth-child(2) hr {
+  color: aliceblue;
+  border: 1px solid #115849;
+  width: 100%;
 }
 
 .MyThoughts {
@@ -291,44 +359,23 @@ header > div {
   border: #115849 1px solid;
 }
 .MyThoughts > section:nth-child(2) {
-  width: 90%;
-  height: 39vh;
-  background: #115849;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-.MyThoughts > section:nth-child(2) h3 {
-  color: aliceblue;
-  font-size: x-large;
-}
-.MyThoughts > section:nth-child(2) hr {
-  color: aliceblue;
-  width: 100%;
-}
-.MyThoughts > section:nth-child(3) {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.MyThoughts > section:nth-child(3) > h3 {
+.MyThoughts > section:nth-child(2) > h3 {
   font-size: 3rem;
 }
-.MyThoughts > section:nth-child(3) > div {
+.MyThoughts > section:nth-child(2) > div {
   width: 90%;
   height: 70vh;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.MyThoughts > section:nth-child(3) > div > div {
+.MyThoughts > section:nth-child(2) > div > div {
   width: 33%;
   display: flex;
   justify-content: center;
@@ -336,7 +383,7 @@ header > div {
   align-items: center;
   font-size: 1.5rem;
 }
-.MyThoughts > section:nth-child(3) > div > div i {
+.MyThoughts > section:nth-child(2) > div > div i {
   font-size: 3rem;
   color: #115849;
 }
@@ -352,13 +399,14 @@ header > div {
 .Card {
   width: 30%;
   height: 70%;
-  background-color: #0C6C57;
+  background-color: #0c6c57;
   border: aliceblue 1px solid;
   color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;

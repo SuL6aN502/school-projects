@@ -14,7 +14,7 @@ export default function Header(){
             <ul>
                 <Link className='li' to="">الصفحة الرئيسية</Link>
                 <hr></hr>
-                <Link className='li' to="/MyThoughts">إبداعات</Link>
+                <Link className='li' to="/MyThoughts">الافكار</Link>
                 <hr></hr>
                 <Link className='li' to="/AboutUs">من نحن</Link>
             </ul>

@@ -1,13 +1,9 @@
 import Card from "./components/Card";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useState } from "react";
-import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
 
 AOS.init();
 export default function MyThoughts() {
-  const [CounterOn, setCounterOn] = useState(false);
 
   return (
     <main className="MyThoughts">
@@ -32,41 +28,7 @@ export default function MyThoughts() {
           />
         </div>
       </section>
-      <section>
-        <h3>طموحاتنا</h3>
-        <hr></hr>
 
-          <ScrollTrigger
-          className="Cards"
-            onEnter={() => setCounterOn(true)}
-            onExit={() => setCounterOn(false)}
-          >
-            <div className="Card" data-aos="fade-right">
-              <h4>فكرة</h4>
-              <p>
-                {CounterOn && (
-                  <CountUp start={0} end={200000} duration={2} delay={0} />
-                )}
-              </p>
-            </div>
-            <div className="Card" data-aos="fade-up">
-              <h4>مساهمة</h4>
-              <p>
-                {CounterOn && (
-                  <CountUp start={0} end={10000} duration={2} delay={0} />
-                )}
-              </p>
-            </div>
-            <div className="Card" data-aos="fade-left">
-              <h4>اصلاح</h4>
-              <p>
-                {CounterOn && (
-                  <CountUp start={0} end={5000} duration={2} delay={0} />
-                )}
-              </p>
-            </div>
-          </ScrollTrigger>
-      </section>
 
       <section>
         <h3>مزايانا</h3>
