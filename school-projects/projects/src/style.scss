@@ -56,6 +56,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 header {
   width: 100%;
@@ -151,7 +152,7 @@ header {
     content: "";
     width: 1000px;
     height: 1000px;
-    background: radial-gradient(#14b29013, transparent 60%);
+    background: radial-gradient(#14b29031, transparent 60%);
     position: absolute;
     right: 0;
     border-radius: 10000px;
@@ -192,12 +193,13 @@ header {
         // لمعة خفيفه
         &::after {
           content: "";
-          width: 300px;
-          height: 300px;
-          background: radial-gradient(#14b29011, transparent 60%);
+          width: 700px;
+          height: 700px;
+          background: radial-gradient(#14b29077, transparent 60%);
           position: absolute;
-          inset: 0px 100px 0 0;
+          inset: 0px -650px 0 0;
           border-radius: 10000px;
+          z-index: -1;
         }
       }
       p {
@@ -241,10 +243,11 @@ header {
       content: "";
       width: 1000px;
       height: 1000px;
-      background: radial-gradient(#14b29011, transparent 60%);
+      background: radial-gradient(#14b3918f, transparent 60%);
       position: absolute;
-      inset: 0px 100px 0 0;
+      inset: auto auto -390px 1450px;
       border-radius: 10000px;
+      z-index: -1;
     }
     p{
       height: 100%;
@@ -292,7 +295,7 @@ header {
       color: $color_1;
       border: 1px solid $color_3;
       width: 100%;
-      
+
     }
   }
 }
@@ -307,7 +310,7 @@ header {
     content: "";
     width: 700px;
     height: 700px;
-    background: radial-gradient(#14b2902c, transparent 60%);
+    background: radial-gradient(#14b29031, transparent 60%);
     position: absolute;
     inset: auto auto auto 0;
     border-radius: 10000px;
@@ -331,7 +334,7 @@ header {
         content: "";
         width: 1000px;
         height: 1000px;
-        background: radial-gradient(#0da48193, transparent 60%);
+        background: radial-gradient(#14b29031, transparent 60%);
         position: absolute;
         right: -100%;
         top: 0;
@@ -759,6 +762,9 @@ header {
       }
     }
     textarea {
+      min-height: 20%;
+      max-height: 50%;
+      font-size: 1.2rem;
       min-width: 50%;
       max-width: 60%;
     }
